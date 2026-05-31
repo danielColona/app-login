@@ -37,4 +37,4 @@ export function autenticarAcesso(login, senha) {
     return resultado;
 }
 
-console.log(autenticarAcesso('arianenascimento', 4321));
+console.log(autenticarAcesso('danielcolona', 1234));
