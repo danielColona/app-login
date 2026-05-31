@@ -13,4 +13,13 @@ describe('Testes de Autenticação no App', function() {
         assert.equal(resultado, 'Logado com Sucesso')
     })
 
+    it('Teste de Login e Senha Incorretos', function(){
+        //Arrange
+        const login = 'danielcolona';
+        const senha = 4321;
+        //Act
+        const resultado = autenticarAcesso(login, senha)
+        //Assert
+        assert.equal(resultado, 'Usuário não encontrado.')
+    })
 })

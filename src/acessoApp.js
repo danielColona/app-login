@@ -5,8 +5,6 @@
 // Caso não exista um usuário com login e senha informados, 
 // uma mensagem dizendo “Usuário não encontrado.” deverá ser exibida.
 
-
-
 const usuarios = [{
   nome: 'Daniel Colona',
   login: 'danielcolona',
@@ -38,3 +36,15 @@ export function autenticarAcesso(login, senha) {
 }
 
 console.log(autenticarAcesso('danielcolona', 1234));
+
+// Segunda opção de função com for....of
+export function realizarLogin(login, senha) {
+    for (let usuario of usuarios) {
+        if (usuario.login == login && usuario.senha == senha) {
+            return 'Logado com Sucesso';
+        }
+    }
+    return 'Usuário não encontrado.';
+}
+
+console.log(realizarLogin('danielcolona', 1234));
